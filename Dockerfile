@@ -39,8 +39,8 @@ RUN \
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash && \
 export NVM_DIR="$HOME/.nvm" && \
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && \
-nvm install 16.20.0
-ENV VSCODE_NODEJS_RUNTIME_DIR="$HOME/.nvm/versions/node/v16.20.0/bin/"
+nvm install 18.15.0
+ENV VSCODE_NODEJS_RUNTIME_DIR="$HOME/.nvm/versions/node/v18.15.0/bin/"
 
 # Set permissions on /etc/passwd and /home to allow arbitrary users to write
 RUN chgrp -R 0 /home && chmod -R g=u /etc/passwd /etc/group /home
