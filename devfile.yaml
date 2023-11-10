@@ -10,6 +10,9 @@ components:
       cpuRequest: 250m
       cpuLimit: 2000m
       args: ['tail', '-f', '/dev/null']
+      env:
+        - name: 'ANSIBLE_COLLECTIONS_PATH'
+          value: '/projects/ansible-devspaces-demo/collections'
 commands:
   - id: oc-install
     exec:
