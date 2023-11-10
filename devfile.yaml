@@ -12,7 +12,7 @@ components:
       args: ['tail', '-f', '/dev/null']
       env:
         - name: 'ANSIBLE_COLLECTIONS_PATH'
-          value: '/projects/ansible-devspaces-demo/collections'
+          value: '~/.ansible/collections:/usr/share/ansible/collections:/projects/ansible-devspaces-demo/collections'
 commands:
   - id: oc-install
     exec:
