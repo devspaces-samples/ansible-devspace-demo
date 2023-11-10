@@ -1,6 +1,8 @@
 ---
 dependency:
   name: galaxy
+  options:
+    requirements-file: requirements.yml
 driver:
   name: default
   options:
@@ -34,6 +36,7 @@ verifier:
 scenario:
   name: default
   test_sequence:
+    - dependency
     - syntax
     - create
     - converge
