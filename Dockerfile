@@ -1,5 +1,5 @@
-# quay.io/ansible/creator-ee:v0.20.0
-FROM quay.io/ansible/creator-ee@sha256:cffd700f8199306cec8d2d0eae202280d3fbf5e3f68c860b492de2eb511c25c0
+# quay.io/ansible/creator-ee:v0.21.0
+FROM quay.io/ansible/creator-ee@sha256:bf95ae745601a9d199eeb12807be24413fc2d6488016069816ee74342c2c255b
 
 ENV HOME=/home/runner
 
