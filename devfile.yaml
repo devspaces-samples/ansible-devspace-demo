@@ -4,7 +4,7 @@ metadata:
 components:
   - name: tooling-container
     container:
-      image: quay.io/devspaces/ansible-creator-ee@sha256:cffd700f8199306cec8d2d0eae202280d3fbf5e3f68c860b492de2eb511c25c0
+      image: quay.io/devspaces/ansible-creator-ee@sha256:af9fccfec39a836ae1172027a1f89724c7cdfafd60af629cc96a727eb70642ff
       memoryRequest: 256M
       memoryLimit: 6Gi
       cpuRequest: 250m
@@ -84,6 +84,17 @@ commands:
         isDefault: true
       component: tooling-container
 
+  - id: ansible-navigator
+    exec:
+      label: "Ansible-Navigator: Start ansible-navigator"
+      commandLine: |
+        if [ ! -d "$HOME/.cache/ansible-navigator" ]; then
+          mkdir -p "$HOME/.cache/ansible-navigator"
+        fi
+        cp /usr/local/lib/python3.11/site-packages/ansible_navigator/data/catalog_collections.py $HOME/.cache/ansible-navigator 
+        ansible-navigator --ee false
+      workingDir: ${PROJECTS_ROOT}/ansible-devspaces-demo
+      component: tooling-container
 events:
   postStart:
     - "oc-install"

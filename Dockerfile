@@ -3,8 +3,9 @@ FROM quay.io/ansible/creator-ee@sha256:bf95ae745601a9d199eeb12807be24413fc2d6488
 
 ENV HOME=/home/runner
 
-# install kubernetes module required by molecule
-RUN pip3 install kubernetes==26.1.0
+# install additional modules required by ansible
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
 
 ## kubectl
 RUN \
