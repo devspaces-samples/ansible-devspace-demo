@@ -1,2 +1,3 @@
 kubernetes==26.1.0
 ansible-navigator==3.5.0
+ansible-creator
