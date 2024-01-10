@@ -23,3 +23,8 @@ repos:
         additional_dependencies:
           - "ansible-core>=2.13"
           - "yamllint>=1.29,<2.0"
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.16.1
+    hooks:
+      - id: gitleaks
