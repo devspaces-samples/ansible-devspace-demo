@@ -1,8 +1,10 @@
 ---
 dependency:
   name: galaxy
+  options:
+    requirements-file: requirements.yml
 driver:
-  name: delegated
+  name: default
   options:
     managed: true
     ansible_connection_options:
@@ -34,6 +36,7 @@ verifier:
 scenario:
   name: default
   test_sequence:
+    - dependency
     - syntax
     - create
     - converge
