@@ -10,7 +10,6 @@ RUN pip3 install -r requirements.txt
 ## kubectl
 RUN \
     microdnf install -y which && \
-    microdnf install -y glibc-langpack-en && \
     microdnf clean all && \
     curl -LO https://dl.k8s.io/release/`curl -LS https://dl.k8s.io/release/stable.txt`/bin/linux/amd64/kubectl && \
     chmod +x ./kubectl && \
