@@ -1,0 +1,19 @@
+---
+dependency:
+  name: galaxy
+  options:
+    requirements-file: requirements.yml
+
+platforms:
+  - name: ubi8
+    image: registry.access.redhat.com/ubi8/ubi-init:latest
+  - name: ubi9
+    image: registry.access.redhat.com/ubi9/ubi-init:latest
+
+driver:
+  options:
+    managed: False
+    login_cmd_template: "podman exec -ti {instance} bash"
+    ansible_connection_options:
+      ansible_connection: podman
+
