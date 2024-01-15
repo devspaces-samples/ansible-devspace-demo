@@ -124,6 +124,8 @@ delete_demo(){
   # misc demo uninstall
   oc delete --wait --all checluster -A
   oc delete --wait -l operators.coreos.com/devspaces.openshift-operators csv -A
+  oc delete --wait -l operators.coreos.com/web-terminal.openshift-operators csv -A
+  oc delete --wait --all machineautoscaler -A
 
   # standard demo uninstall
   oc delete --wait -k gitops/02-components
