@@ -2,4 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
+  - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/web-terminal/operator/overlays/fast
+  - https://github.com/codekow/demo-ai-gitops-catalog/components/operators/web-terminal/instance/overlays/enhanced
   - link-github.yaml
