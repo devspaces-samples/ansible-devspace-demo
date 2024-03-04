@@ -44,20 +44,20 @@ commands:
         isDefault: true
       component: tooling-container
 
-  - id: molecule-verify
+  - id: molecule-converge
     exec:
-      label: "3.Molecule: run the verification against the test pod"
-      commandLine: 'source $HOME/.bashrc && molecule verify'
+      label: "3.Molecule: apply the role to the pod"
+      commandLine: 'source $HOME/.bashrc && molecule converge'
       workingDir: ${PROJECTS_ROOT}/ansible-devspaces-demo/collections/ansible_collections/sample_namespace/sample_collection/extensions
       group:
         kind: run
         isDefault: true
       component: tooling-container
 
-  - id: molecule-converge
+  - id: molecule-verify
     exec:
-      label: "4.Molecule: apply the role to the pod"
-      commandLine: 'source $HOME/.bashrc && molecule converge'
+      label: "4.Molecule: run the verification against the test pod"
+      commandLine: 'source $HOME/.bashrc && molecule verify'
       workingDir: ${PROJECTS_ROOT}/ansible-devspaces-demo/collections/ansible_collections/sample_namespace/sample_collection/extensions
       group:
         kind: run
