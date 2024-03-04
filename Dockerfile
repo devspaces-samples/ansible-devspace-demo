@@ -7,6 +7,9 @@ ENV HOME=/home/runner
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
+## install golang for pre-commit
+RUN microdnf install -y go
+
 ## kubectl
 RUN \
     microdnf install -y which && \
