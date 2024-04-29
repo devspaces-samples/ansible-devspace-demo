@@ -24,7 +24,7 @@ To get started with OpenShift Dev Spaces, refer to the [OpenShift Dev Spaces doc
 
 ## Base Image Of Devfile
 
-Ultimately we intend to use the [ansible creator image](https://github.com/ansible/creator-ee) as the base image, however there are currently some [technical blockers](https://github.com/eclipse/che/issues/21778) to doing that. The `Dockerfile` in this repo is that of the image we are currently pulling down for reference.
+[Community Ansible Dev Spaces Image](https://github.com/ansible/community-ansible-devspaces-image) is used as an image for Ansible development and it's defined in the `devfile.yaml`.
 
 ### GitHub OAuth2
 
