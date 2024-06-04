@@ -4,7 +4,7 @@ metadata:
 components:
   - name: tooling-container
     container:
-      image: ghcr.io/ansible/ansible-workspace-env-reference@sha256:f02448b3b8423cfedf2773bb2dc8c21e2bf3a00c3df6e501916af2c5467a93f2
+      image: ghcr.io/ansible/ansible-workspace-env-reference@sha256:03d7f0fe6caaae62ff2266906b63d67ebd9cf6e4a056c7c0a0c1320e6cfbebce
       memoryRequest: 256M
       memoryLimit: 6Gi
       cpuRequest: 250m
@@ -14,15 +14,6 @@ components:
         - name: 'ANSIBLE_COLLECTIONS_PATH'
           value: '~/.ansible/collections:/usr/share/ansible/collections:/projects/ansible-devspaces-demo/collections'
 commands:
-
-  - id: oc-install
-    exec:
-      commandLine: '/usr/local/bin/ansible-playbook ${PROJECT_SOURCE}/playbooks/install_oc.yml'
-      workingDir: ${PROJECT_SOURCE}
-      group:
-        kind: build
-        isDefault: true
-      component: tooling-container
 
   - id: molecule-create
     exec:
@@ -95,6 +86,3 @@ commands:
         ansible-navigator --ee false
       workingDir: ${PROJECTS_ROOT}/ansible-devspaces-demo
       component: tooling-container
-events:
-  postStart:
-    - "oc-install"
