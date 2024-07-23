@@ -1,0 +1,12 @@
+{
+	"settings": {
+		"ansible.lightspeed.suggestions.enabled": true,
+		"ansible.lightspeed.enabled": true
+	},
+	"folders": [
+		{
+			"name": "ansible-devspaces-demo",
+			"path": "/projects/ansible-devspaces-demo"
+		}
+	]
+}
