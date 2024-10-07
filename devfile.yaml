@@ -1,10 +1,11 @@
+# cspell: disable=devspaces
 schemaVersion: 2.2.2
 metadata:
   name: ansible-demo
 components:
   - name: tooling-container
     container:
-      image: ghcr.io/ansible/ansible-workspace-env-reference@sha256:03d7f0fe6caaae62ff2266906b63d67ebd9cf6e4a056c7c0a0c1320e6cfbebce
+      image: ghcr.io/ansible/ansible-devspaces@sha256:a28fa23d254ff1b3ae10b95a0812132148f141bda4516661e40d0c49c4ace200 # v24.10.2
       memoryRequest: 256M
       memoryLimit: 6Gi
       cpuRequest: 250m
