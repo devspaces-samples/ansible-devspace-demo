@@ -1,0 +1,14 @@
+---
+- name: Verify
+  hosts: molecule
+  gather_facts: false
+
+  tasks:
+    - name: Gather package information
+      ansible.builtin.package_facts:
+
+    - name: Assert apache package is installed
+      ansible.builtin.assert:
+        that:
+          - "'httpd' in ansible_facts.packages"
+
