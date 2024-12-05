@@ -1,8 +1,19 @@
+# Repository Archived 🚨
+
+This repository has been archived and is no longer actively maintained.
+
+It has been moved to [https://github.com/redhat-developer-demos/ansible-devspaces-demo](https://github.com/redhat-developer-demos/ansible-devspaces-demo/tree/devspaces-3-rhel-8).
+
+Please refer to the new repository for the latest updates and contributions.
+
+Thank you for your interest and support! 😊
+
+
+# Ansible Development on OpenShift Dev Spaces
+
 To get started, simply click the button below...
 
 [![Contribute](https://www.eclipse.org/che/contribute.svg)](https://workspaces.openshift.com/f?url=https://github.com/devspaces-samples/ansible-devspaces-demo)
-
-# Ansible Development on OpenShift Dev Spaces
 
 This repository provides a development environment for Ansible playbook creation, testing with Molecule, and ansible-lint checks using OpenShift Dev Spaces.
 
